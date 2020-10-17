@@ -1,0 +1,50 @@
+enable-image-display: false                  # 启用图片显示，适用于需要验证码登录的情况，启用wait-login自动开启
+disable-headless: false                      # 禁用无头模式
+request-config:                              # 请求头配置
+  user-agent: ""                             # 请求user-agent配置
+  headers:                                   # 请求header配置
+  - key: ""                                  # header的key
+    value: ""                                # header的value
+  cookies:                                   # 请求cookie配置
+  - name: "gr_user_id"
+    value: "6e7e097f-7be8-4e3c-9663-641b6d75055a"
+  - name: "is_wx_new"
+    value: "1"
+  - name: "mc_loguser_source"
+    value: "weixin"
+  - name: "mc_loguser_channel"
+    value: "default"
+  - name: "mc_loguser_tickets"
+    value: "jwt%3AeyJhbGciOiJSUzI1NiJ9.eyJpZCI6IjMxNjY2MzIyIiwianRpIjoiNjdiNzZkN2Y4ZjBmNjRkN2Q1MGQ4MmEzNGUxNzNiN2M5ZTRiNmE1YS0zOm1hbGwiLCJpYXQiOjE2MDI0ODQ4NzIwNjl9.SVOlrr6VjHpQ0z9q5SQc3cmHZmXw079cPbfj9X2ZlR-sJi5G-s1U_WAnVekvAh5VyNMMC7SM0ZK6WdeMyupdYIn-ZWA_0nh4XkfrjlLPbqhUPcXne4-OKIvdrLnMyN2un25mFq3Q2yLQBWP3_-26eqvXQ0c_hEijm14jG-Dzm-w"
+  - name: "pay_weixin_ticket"
+    value: "yPLlIYupjqi4JlxW2kahqLdvYTF0tqrGe8dHJhnDZG7e9vvg21PAdEVVgvs%2B4ROEf6T5Vb4%2F2Cm7%2BhR5I%2F6BIqpqLEO8X345HmSY%2FmI%2BbJBKtJeCAJVAn1OKVpI6iLS7I485gGd055J4cvHPtyh9ZHLrov2X3MYh2NCUMcisa15jS5q7f0b9DXf5mXbc1beF07X5PL9BdXJ0JdyFspRAE4AXQ0bmcB9FhbE9TjjWqaR8qWQuEPnchdMY32fqXBXjbFJa5qcFtvc%2BSbWvdZ92RGNQig88Wii22%2BOEbo6BvMzrEnZ%2FlNrM9HMajhikMypQeTpPpCc2V6oph2b%2FC%2B%2BGJb4qthGWejVNQkzoLoth4NLLZvb9iwDB81hIrWMJt68juXGkm2P%2Bre0sWtSSiqFSDHIegcTGu8XVfADmMRO4wW7rkMCLJOUSsZyDTT2ZAnyr"
+  - name: "mc_loguser_passport"
+    value: "31666322"
+  - name: "mc_loguser_company"
+    value: "31223596"
+  - name: "mc_loguser_area"
+    value: "6346"
+  - name: "beta_user_token"
+    value: "admin_user_753608_web_a411f2eaecf9bfad5ed8ed12cfe09693"
+  - name: "PRO_CASTGC"
+    value: "ldap"
+  - name: "login_type"
+    value: "0"
+  - name: "test_user_token"
+    value: "admin_user_202821_web_6d2cda59baaaade0524c2d11bf16dbb8"
+  - name: "TEST_CASTGC"
+    value: "ldap"
+restrictions-on-urls:                        # 对爬取的URL的一些限制项
+  disallowed-suffix: []                      # 不允许的文件后缀
+  disallowed-keywords-in-path-and-query: []  # 不允许的URL关键字
+  disallowed-domain: []                      # 不允许的域名
+  disallowed-urls: []                        # 不允许的URL（正则）
+  allowed-domains: []                        # 允许的域名，起始目标会被自动加入其中
+  allowed-urls: []                           # 允许的URL（正则）
+restrictions-on-requests:                    # 对请求行为的一些限制项
+  max-concurrent: 10                         # 最大页面并发（不大于10）
+  max-depth: 5                               # 最大页面深度限制
+  max-click-depth: 5                         # 一个页面中最大点击深度限制
+  max-count-of-page: 1000                    # 最多爬取的页面数量限制
+  max-click-or-event-trigger: 1000           # 单个页面中最大点击或事件触发次数(不大于10000)
+  click-or-event-interval: 1000              # 点击间隔，单位毫秒

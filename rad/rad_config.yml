@@ -1,0 +1,58 @@
+enable-image-display: false                  # 启用图片显示，适用于需要验证码登录的情况，启用wait-login自动开启
+disable-headless: false                      # 禁用无头模式
+request-config:                              # 请求头配置
+  user-agent: ""                             # 请求user-agent配置
+  headers:                                   # 请求header配置
+  - key: "User-Agent"                                  # header的key
+    value: "Mozilla/5.0 (Windows NT 10.0; Win64; x64; MeiCaiSecWWW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.162 Safari/537.36"                                # header的value
+  cookies:                                   # 请求cookie配置
+  - name: "gr_user_id"
+    value: "742a20b4-8a3f-435e-9da0-f96423fdb16e"
+  - name: "mc_loguser_tickets"
+    value: "jwt%3AeyJhbGciOiJSUzI1NiJ9.eyJpZCI6IjQwMzgyNyIsImp0aSI6IjlhOGZlNmIyZDk0YWJmOWI3NTk5ZjNjMzU3NDNmZGY1OTFkN2I5NGYtMzpwYXNzcG9ydCIsImlhdCI6MTYwMTE5OTEzNDMxNX0.fZ4nOBlDdPRKRRZw-vMp5xHZohHpKJUR5iHLhNLSMWQuEZ_51TVp7MzhdwYjIt7J8VevBtH4UbhdDhlBdA81GfJnhU5yLdHqOM-9kNxUY4Q5SzcAcrlv3rQ8H6oxP4BqgEUMHPb42m2kp4rAlviGbjvNSzOU9WJkox4y9LZ8VR4"
+  - name: "warehouseId"
+    value: "1"
+  - name: "cityId"
+    value: "1"
+  - name: "cis_current_city"
+    value: "1"
+  - name: "tms_site_currentSite"
+    value: "1"
+  - name: "tms_currentCity"
+    value: "1"
+  - name: "stage_tms_currentCity"
+    value: "1"
+  - name: "test_tms_currentCity"
+    value: "1"
+  - name: "test_user_token"
+    value: "admin_user_202821_web_ef46d7e6b102acea08725b9838b1c6bc"
+  - name: "TEST_CASTGC"
+    value: "ldap"
+  - name: "stage_user_token"
+    value: "admin_user_201473_web_b2a0f6ac41b887a4869800550babfe7d"
+  - name: "STAGE_CASTGC"
+    value: "ldap"
+  - name: "stage_sol_currentCity"
+    value: "1"
+  - name: "current_city_id"
+    value: "2"
+  - name: "login_type"
+    value: "0"
+  - name: "qc_user_token"
+    value: "admin_user_201473_web_e9b59c5d29b299a03b69df0531f94397"
+  - name: "STAGE_CASTGC"
+    value: "ldap"
+restrictions-on-urls:                        # 对爬取的URL的一些限制项
+  disallowed-suffix: []                      # 不允许的文件后缀
+  disallowed-keywords-in-path-and-query: ["/logout"]  # 不允许的URL关键字
+  disallowed-domain: []                      # 不允许的域名
+  disallowed-urls: []                        # 不允许的URL（正则）
+  allowed-domains: []                        # 允许的域名，起始目标会被自动加入其中
+  allowed-urls: []                           # 允许的URL（正则）
+restrictions-on-requests:                    # 对请求行为的一些限制项
+  max-concurrent: 10                         # 最大页面并发（不大于10）
+  max-depth: 5                               # 最大页面深度限制
+  max-click-depth: 5                         # 一个页面中最大点击深度限制
+  max-count-of-page: 1000                    # 最多爬取的页面数量限制
+  max-click-or-event-trigger: 1000           # 单个页面中最大点击或事件触发次数(不大于10000)
+  click-or-event-interval: 1000              # 点击间隔，单位毫秒
