@@ -229,9 +229,6 @@ mitm:
     password: ""
   restriction:
     includes: # 允许扫描的域，此处无协议
-    - '*.yunshanmeicai.com' # 表示允许所有的域名和 path
-    - 'passportgateway.yunshanmeicai.com' # 表示允许所有的域名和 path
-    - 'meicai.nuanyue.com' # 表示允许所有的域名和 path
     - 'example.com' # 表示允许 example.com 下的所有 path
     - "example.com/admin*" # 表示允许 example.com 下的 /admin 开头的 path
     excludes:
