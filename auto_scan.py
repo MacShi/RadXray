@@ -69,7 +69,7 @@ class auto_scan:
 
 if __name__ == '__main__':
     # if start_xray("9999","aa.html"):
-    url ="http://vulmanage.yunshanmeicai.com/vulmanage/"
+    url ="http://vulmanage.com/vulmanage/"
     #     start_rad(url,9999,"aa.json")
     auto_scan=auto_scan(url=url,xray_port=9999,xray_result_file_name="aa.html",rad_result_file_nme="aa.json")
     auto_scan.start_rad()
